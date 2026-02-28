@@ -1,0 +1,32 @@
+[
+  {
+    "file": "src/vm.c",
+    "arguments": [
+      "clang",
+      "-MMD",
+      "-MP",
+      "-Wall",
+      "-Wextra",
+      "-Wconversion",
+      "-g",
+      "-Iinclude",
+      "-c",
+      "src/vm.c",
+      "-o",
+      "build/vm.o"
+    ],
+    "directory": "/home/sbng/brass-vm",
+    "output": "build/vm.o"
+  },
+  {
+    "file": "srcbin/main.c",
+    "arguments": [
+      "clang",
+      "srcbin/main.c",
+      "-o",
+      "build/brassvm"
+    ],
+    "directory": "/home/sbng/brass-vm",
+    "output": "build/brassvm"
+  }
+]
