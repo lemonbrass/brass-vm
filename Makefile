@@ -15,6 +15,12 @@ TEST := $(shell find test -name "*.c")
 TESTOBJ := $(patsubst test/%.c,build/test/%.o,$(TEST))
 TESTBIN := $(TESTOBJ:.o=.exe)
 
+runtest: test
+	$(foreach test, $(TESTBIN), ./$(test))
+
+run: bin
+	./$(BIN)
+
 bin: lib
 	$(CC) $(SRCBIN) -Lbuild -lbrass -o $(BIN)
 
